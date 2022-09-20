@@ -1,0 +1,26 @@
+{
+  "name": "chat-nextjs-dos",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && next export",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/server": "^11.10.0",
+    "@emotion/styled": "^11.10.4",
+    "@mui/icons-material": "^5.10.6",
+    "@mui/material": "^5.10.6",
+    "@mui/system": "^5.10.6",
+    "next": "12.3.0",
+    "react": "^17.0.2",
+    "react-chatbot-kit": "^2.1.0",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "eslint": "8.23.1",
+    "eslint-config-next": "12.3.0"
+  }
+}
