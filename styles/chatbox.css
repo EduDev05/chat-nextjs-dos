@@ -225,6 +225,7 @@
 .react-chatbot-kit-chat-btn-send {
   background: linear-gradient(#3da5e6,#1982FC);
   width: 100px;
+  height: 30px;
   border: none;
   color: #fff;
   border-top-right-radius: 5px;
@@ -233,7 +234,7 @@
 
 .react-chatbot-kit-chat-btn-send-icon {
   fill: #fff;
-  width: 15px;
+  width: 25px;
 }
 
 .react-chatbot-kit-error {

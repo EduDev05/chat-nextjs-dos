@@ -13,15 +13,19 @@ const Options = ({ getOptions, actionProvider }) => {
     <div className={styles.container}>
       {options.map((option) => {
         return (
-          <Chip
+          <Chip className={styles.respuesta}
             key={option.id}
             onClick={option.handler}
             label={option.text}
             sx={{
-              marginRight: '5px',
-              padding: '2px',
+              marginRight: '2px',
+              // padding: '2px',
+              padding: '10px 15px',
               fontSize: '0.85rem',
               marginBottom: '5px',
+              position: 'relative',
+              width: 'auto',
+              // font-weight: 'medium',
             }}
           />
         );

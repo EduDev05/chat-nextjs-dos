@@ -1,5 +1,4 @@
 // import { getProgrammingJoke } from 'random-joke-getter';
-
 const intro =
   "I'm a Computer Science student at UCLA and an aspiring software engineer. What do you want to know about me?";
 const experience =
@@ -10,11 +9,38 @@ const skills =
   "I have three years of experience in fullstack development. I'm a MERN stack lover (MongoDB, Express, React, Node.js).";
 const blogs = 'Check out my blogs on Dev Community and Medium!';
 
-const menu2 = "Soy menu 2";
-const menu3 = "Soy menu 3";
-const menu4 = "Soy menu 4";
-const menu5 = "Soy menu 5";
-const menu6 = "Soy menu 6";
+//menu1
+const menu1 = "Da click en alguna de estas consultas frecuentes o escribe tu duda abajo 😉";
+const menu1op1="Recuperacíon de contraseña";
+const menu1op2="¿Cómo navegar en el portal?";
+const menu1op3="¿Cómo editar mi perfil?";
+//menu2
+const menu2 = "Da click en alguna de estas consultas frecuentes o escribe tu duda abajo 😉";
+const menu2op1="¿Comó realizar un pedido?";
+const menu2op2="Rastrear pedido";
+const menu2op3="No ha llegado mi pedido";
+const regresarmenu="Regresar al menu principal";
+//menu3
+const menu3 = "Pagos";
+const menu3op1="¿Comó realizar un pedido?";
+const menu3op2="Rastrear pedido";
+const menu3op3="No ha llegado mi pedido";
+//menu4
+const menu4 = "Facturacion";
+const menu4op1="¿Comó realizar un pedido?";
+const menu4op2="Rastrear pedido";
+const menu4op3="No ha llegado mi pedido";
+//menu5
+const menu5 = "Cambios y devoluciones";
+const menu5op1="¿Comó realizar un pedido?";
+const menu5op2="Rastrear pedido";
+const menu5op3="No ha llegado mi pedido";
+//menu6
+const menu6 = "Servicios";
+const menu6op1="¿Comó realizar un pedido?";
+const menu6op2="Rastrear pedido";
+const menu6op3="No ha llegado mi pedido";
+
 
 class ActionProvider {
   constructor(createChatBotMessage, setStateFunc) {
@@ -28,76 +54,156 @@ class ActionProvider {
     );
     this.updateChatbotState(greetingMessage);
   }
-
-  handleGoodMood() {
-    const message = this.createChatBotMessage(intro, {
-      widget: 'personalOptions',
+  //menu1 opciones
+  handleMenu1() {
+    const message = this.createChatBotMessage(menu1, {
+      widget: 'menu1',
     });
     this.updateChatbotState(message);
   }
-
+  handleMenu1Op1() {
+    const message = this.createChatBotMessage(menu1op1, {
+      widget: 'menu1op1',
+    });
+    this.updateChatbotState(message);
+  }
+  handleMenu1Op2() {
+    const message = this.createChatBotMessage(menu1op2, {
+      widget: 'menu1op2',
+    });
+    this.updateChatbotState(message);
+  }
+  handleMenu1Op3() {
+    const message = this.createChatBotMessage(menu1op3, {
+      widget: 'menu1po3',
+    });
+    this.updateChatbotState(message);
+  }
+  //menu2 opciones
   handleMenu2() {
     const message = this.createChatBotMessage( menu2, {
       widget: 'menu2',
     });
     this.updateChatbotState(message);
   }
-
+  handleMenu2Op1() {
+    const message = this.createChatBotMessage(menu2op1, {
+      widget: 'menu2op1',
+    });
+    this.updateChatbotState(message);
+  }
+  handleMenu2Op2() {
+    const message = this.createChatBotMessage(menu2op2, {
+      widget: 'menu2op2',
+    });
+    this.updateChatbotState(message);
+  }
+  handleMenu2Op3() {
+    const message = this.createChatBotMessage(menu2op3, {
+      widget: 'menu2po3',
+    });
+    this.updateChatbotState(message);
+  }
+  //menu3 opciones
   handleMenu3() {
     const message = this.createChatBotMessage(menu3, {
       widget: 'menu3',
     });
     this.updateChatbotState(message);
   }
-
+ handleMenu3Op1() {
+      const message = this.createChatBotMessage(menu3op1, {
+        widget: 'menu3op1',
+      });
+      this.updateChatbotState(message);
+  }
+  handleMenu3Op2() {
+      const message = this.createChatBotMessage(menu3op2, {
+        widget: 'menu3op2',
+      });
+      this.updateChatbotState(message);
+  }
+  handleMenu3Op3() {
+      const message = this.createChatBotMessage(menu3op3, {
+        widget: 'menu3po3',
+      });
+      this.updateChatbotState(message);
+  }
+  //menu4 opciones
   handleMenu4() {
     const message = this.createChatBotMessage(menu4, {
       widget: 'menu4',
     });
     this.updateChatbotState(message);
   }
-
+  handleMenu4Op1() {
+    const message = this.createChatBotMessage(menu4op1, {
+      widget: 'menu4op1',
+    });
+    this.updateChatbotState(message);
+  }
+  handleMenu4Op2() {
+    const message = this.createChatBotMessage(menu4op2, {
+      widget: 'menu4op2',
+    });
+    this.updateChatbotState(message);
+  }
+  handleMenu4Op3() {
+    const message = this.createChatBotMessage(menu4op3, {
+      widget: 'menu4po3',
+    });
+    this.updateChatbotState(message);
+  }
+  //menu5 opciones
   handleMenu5() {
     const message = this.createChatBotMessage(menu5, {
       widget: 'menu5',
     });
     this.updateChatbotState(message);
   }
-
+  handleMenu5Op1() {
+    const message = this.createChatBotMessage(menu5op1, {
+      widget: 'menu5op1',
+    });
+    this.updateChatbotState(message);
+  }
+  handleMenu5Op2() {
+    const message = this.createChatBotMessage(menu5op2, {
+      widget: 'menu5op2',
+    });
+    this.updateChatbotState(message);
+  }
+  handleMenu5Op3() {
+    const message = this.createChatBotMessage(menu5op3, {
+      widget: 'menu5po3',
+    });
+    this.updateChatbotState(message);
+  }
+  //menu6 opciones
   handleMenu6() {
     const message = this.createChatBotMessage(menu6, {
       widget: 'menu6',
     });
     this.updateChatbotState(message);
   }
- 
-
-
-  // async handleBadMood() {
-  //   const jokeData = await (
-  //     await fetch('https://v2.jokeapi.dev/joke/Any?type=single')
-  //   ).json();
-  //   const message = this.createChatBotMessage(
-  //     `Let me tell you a joke: ${jokeData.joke}`,
-  //     {
-  //       widget: 'jokeOptions',
-  //     }
-  //   );
-  //   this.updateChatbotState(message);
-  // }
-
-  // async handleBadMoodAgain() {
-  //   const jokeData = await (
-  //     await fetch('https://v2.jokeapi.dev/joke/Any?type=single')
-  //   ).json();
-  //   const message = this.createChatBotMessage(
-  //     `Here's another one: ${jokeData.joke}`,
-  //     {
-  //       widget: 'jokeOptions',
-  //     }
-  //   );
-  //   this.updateChatbotState(message);
-  // }
+  handleMenu6Op1() {
+    const message = this.createChatBotMessage(menu6op1, {
+      widget: 'menu6op1',
+    });
+    this.updateChatbotState(message);
+  }
+  handleMenu6Op2() {
+    const message = this.createChatBotMessage(menu6op2, {
+      widget: 'menu6op2',
+    });
+    this.updateChatbotState(message);
+  }
+  handleMenu6Op3() {
+    const message = this.createChatBotMessage(menu6op3, {
+      widget: 'menu6po3',
+    });
+    this.updateChatbotState(message);
+  }
 
   handleGoodMoodFinally() {
     const message = this.createChatBotMessage(
@@ -113,6 +219,14 @@ class ActionProvider {
     });
     this.updateChatbotState(message);
   }
+
+  handleMenuPrincipal() {
+    const message = this.createChatBotMessage(regresarmenu, {
+      widget: 'regresarmenu',
+    });
+    this.updateChatbotState(message);
+  }
+
 
   handleProjects() {
     const message = this.createChatBotMessage(projects, {

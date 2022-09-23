@@ -22,7 +22,7 @@ const WebHome = () => {
         <LinksBar />
       </div>
       <Chatbot
-        className={styles}
+        className={styles.floatingchatstate}
         config={config}
         actionProvider={ActionProvider}
         messageParser={MessageParser}

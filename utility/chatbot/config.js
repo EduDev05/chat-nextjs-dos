@@ -1,135 +1,267 @@
 import { createChatBotMessage } from 'react-chatbot-kit';
 import Options from '../../components/molecules/Options';
-import ExperienceCards from '../../components/organisms/ExperienceCards';
-import ProjectCards from '../../components/organisms/ProjectCards';
-import SkillCards from '../../components/organisms/SkillCards';
-import BlogCards from '../../components/organisms/BlogCards';
+//import ExperienceCards from '../../components/organisms/ExperienceCards';
+//import ProjectCards from '../../components/organisms/ProjectCards';
+//import SkillCards from '../../components/organisms/SkillCards';
+//import BlogCards from '../../components/organisms/BlogCards';
 
 const getMoodOptions = (actionProvider) => {
   return [
     {
-      text: 'Menu1',
-      handler: () => actionProvider.handleGoodMood(),
+      text: 'Navegación Market Tec 🖥️',
+      handler: () => actionProvider.handleMenu1(),
       id: 1,
     },
     {
-      text: 'Pedidos',
+      text: 'Pedidos 🛒',
       handler: () => actionProvider.handleMenu2(),
       id: 2,
     },
     {
-      text: 'Pagos',
+      text: 'Pagos 💳',
       handler: () => actionProvider.handleMenu3(),
-      id: 2,
+      id: 3,
     },
     {
-      text: 'Facturacion',
+      text: 'Facturación 📝',
       handler: () => actionProvider.handleMenu4(),
-      id: 2,
+      id: 4,
     },
     {
-      text: 'Cambios y devoluciones',
+      text: 'Cambios y Devoluciones 📦',
       handler: () => actionProvider.handleMenu5(),
-      id: 2,
+      id: 5,
     },
     {
-      text: 'Servicios',
+      text: 'Servicios 🚌',
       handler: () => actionProvider.handleMenu6(),
-      id: 2,
+      id: 6,
     },
   ];
 };
 
-// const getJokeOptions = (actionProvider) => {
+// const getPersonalOptions = (actionProvider) => {
 //   return [
 //     {
-//       text: "LOL that's funny",
-//       handler: () => actionProvider.handleGoodMoodFinally(),
+//       text: 'Experience',
+//       handler: () => actionProvider.handleExperience(),
 //       id: 1,
 //     },
 //     {
-//       text: 'Tell me another one',
-//       handler: () => actionProvider.handleBadMoodAgain(),
+//       text: 'Projects',
+//       handler: () => actionProvider.handleProjects(),
 //       id: 2,
+//     },
+//     {
+//       text: 'Skills',
+//       handler: () => actionProvider.handleSkills(),
+//       id: 3,
+//     },
+//     {
+//       text: 'Blogs',
+//       handler: () => actionProvider.handleBlogs(),
+//       id: 4,
 //     },
 //   ];
 // };
-
-const getPersonalOptions = (actionProvider) => {
+//Menu1
+const getMenu1Options = (actionProvider) => {
   return [
     {
-      text: 'Experience',
-      handler: () => actionProvider.handleExperience(),
+      text: 'Recuperacíon de contraseña',
+      handler: () => actionProvider.handleMenu1Op1(),
       id: 1,
     },
     {
-      text: 'Projects',
-      handler: () => actionProvider.handleProjects(),
+      text: '¿Cómo navegar en el portal?',
+      handler: () => actionProvider.handleMenu1Op2(),
       id: 2,
     },
     {
-      text: 'Skills',
-      handler: () => actionProvider.handleSkills(),
+      text: '¿Cómo editar mi perfil?',
+      handler: () => actionProvider.handleMenu1Op3(),
       id: 3,
     },
     {
-      text: 'Blogs',
-      handler: () => actionProvider.handleBlogs(),
+      text: 'Regresar al menu princial',
+      handler: () => actionProvider.handleMenuPrincipal(),
       id: 4,
     },
+
   ];
 };
+const getMenu1Op1 = (actionProvider) => {
+  return [
+    {
+      text: '¡Comprar en Market Tec es muy fácil! 👇\nBusca tus productos y/o servicios\n'+
+      'Agrégalos a un carrito de compra dando clic en Agregar al carrito 🛒\n'+
+      'Una vez que termines, ve a tu carrito en la parte superior derecha y da clic en Cerrar pedido\n'+
+      'Revisa que tu pedido esté correcto y da clic en Continuar\n'+
+      'Si eres nuevo usuario, llena los datos de contacto 👤\n'+
+      'Captura tu dirección de envío\n'+
+      'Elige método de pago y da clic en Comprar ahora 💳\n'+
+      '¡Listo! Podrás revisar tu pedido en la sección de Mis Pedidos',
+      handler: () => actionProvider.handleMenuPrincipal(),
+      id: 1,
+    },
 
+  ];
+};
+const getMenu1Op2 = (actionProvider) => {
+  return [
+    {
+      text: 'Para poder dar seguimiento a tu pedido únicamente necesitas el número\n'+ 
+      'de guía para rastrearlo directamente en la página de la paquetería que se te indique. 🚚',
+      handler: () => actionProvider.handleMenuPrincipal(),
+      id: 1,
+    },
+
+  ];
+};
+const getMenu1Op3 = (actionProvider) => {
+  return [
+    {
+      text: 'Si consideras que tu pedido ya tardó demasiado, te recomiendo que te pongas\n'+ 
+      'en contacto con el equipo de TEC Services a través del correo TECservices@servicios.tec.mx\n'+ 
+      'para que puedan apoyarte a rastrearlo. 📦',
+      handler: () => actionProvider.handleMenuPrincipal(),
+      id: 1,
+    },
+
+  ];
+};
+//Menu2
 const getMenu2Options = (actionProvider) => {
   return [
     {
-      text: 'Experience',
-      handler: () => actionProvider.handleExperience(),
+      text: '¿Comó realizar un pedido?',
+      handler: () => actionProvider.handleMenu2Op1(),
       id: 1,
     },
     {
-      text: 'Projects',
-      handler: () => actionProvider.handleProjects(),
+      text: 'Rastrear pedido',
+      handler: () => actionProvider.handleMenu2Op2(),
       id: 2,
     },
     {
-      text: 'Skills',
-      handler: () => actionProvider.handleSkills(),
+      text: 'No ha llegado mi pedido',
+      handler: () => actionProvider.handleMenu2Op3(),
       id: 3,
     },
     {
-      text: 'Blogs',
-      handler: () => actionProvider.handleBlogs(),
+      text: 'Regresar al menu princial',
+      handler: () => actionProvider.handleMenuPrincipal(),
       id: 4,
     },
+
   ];
 };
+const getMenu2Op1 = (actionProvider) => {
+  return [
+    {
+      text: '¡Comprar en Market Tec es muy fácil! 👇\nBusca tus productos y/o servicios\n'+
+      'Agrégalos a un carrito de compra dando clic en Agregar al carrito 🛒\n'+
+      'Una vez que termines, ve a tu carrito en la parte superior derecha y da clic en Cerrar pedido\n'+
+      'Revisa que tu pedido esté correcto y da clic en Continuar\n'+
+      'Si eres nuevo usuario, llena los datos de contacto 👤\n'+
+      'Captura tu dirección de envío\n'+
+      'Elige método de pago y da clic en Comprar ahora 💳\n'+
+      '¡Listo! Podrás revisar tu pedido en la sección de Mis Pedidos',
+      handler: () => actionProvider.handleMenuPrincipal(),
+      id: 1,
+    },
 
+  ];
+};
+const getMenu2Op2 = (actionProvider) => {
+  return [
+    {
+      text: 'Para poder dar seguimiento a tu pedido únicamente necesitas el número\n'+ 
+      'de guía para rastrearlo directamente en la página de la paquetería que se te indique. 🚚',
+      handler: () => actionProvider.handleMenuPrincipal(),
+      id: 1,
+    },
+
+  ];
+};
+const getMenu2Op3 = (actionProvider) => {
+  return [
+    {
+      text: 'Si consideras que tu pedido ya tardó demasiado, te recomiendo que te pongas\n'+ 
+      'en contacto con el equipo de TEC Services a través del correo TECservices@servicios.tec.mx\n'+ 
+      'para que puedan apoyarte a rastrearlo. 📦',
+      handler: () => actionProvider.handleMenuPrincipal(),
+      id: 1,
+    },
+
+  ];
+};
+//Menu3
 const getMenu3Options = (actionProvider) => {
   return [
     {
-      text: 'Experience',
-      handler: () => actionProvider.handleExperience(),
+      text: 'Formas de pago disponible',
+      handler: () => actionProvider.handleMenu3Op1(),
       id: 1,
     },
     {
-      text: 'Projects',
-      handler: () => actionProvider.handleProjects(),
+      text: 'Problemas al pagar',
+      handler: () => actionProvider.handleMenu3Op2(),
       id: 2,
     },
     {
-      text: 'Skills',
-      handler: () => actionProvider.handleSkills(),
+      text: '¿Como validar un pago?',
+      handler: () => actionProvider.handleMenu3Op3(),
       id: 3,
     },
     {
-      text: 'Blogs',
-      handler: () => actionProvider.handleBlogs(),
+      text: 'Regresar al menu princial',
+      handler: () => actionProvider.handleMenuPrincipal(),
       id: 4,
     },
   ];
 };
+const getMenu3Op1 = (actionProvider) => {
+  return [
+    {
+      text: 'Por el momento estas son las formas de pago que estan disponibles:\n'+
+        'Tarjetas de Crédito o Débito Visa, MasterCard, American Express y Carnet 💳\n'+
+        'PayPaln\n'+
+        'Ficha de depósito para pago en ventanilla bancaria 💰\n'+
+        'Bancos participantes: Bancomer, Banorte, Banamex, Santander y HSBC\n'+
+        'Banca electrónica 🖥️\n'+
+        'Bancos participantes: Bancomer, Banorte, Banamex y Santander\n'+
+        'Los estudiantes de Profesional y Posgrado tienen la opción de cargo en Estado de Cuenta',
+      handler: () => actionProvider.handleMenuPrincipal(),
+      id: 1,
+    },
+  ];
+};
+const getMenu3Op2 = (actionProvider) => {
+  return [
+    {
+      text: 'Para poder dar seguimiento a tu pedido únicamente necesitas el número\n'+ 
+      'de guía para rastrearlo directamente en la página de la paquetería que se te indique. 🚚',
+      handler: () => actionProvider.handleMenuPrincipal(),
+      id: 1,
+    },
 
+  ];
+};
+const getMenu3Op3 = (actionProvider) => {
+  return [
+    {
+      text: 'Si consideras que tu pedido ya tardó demasiado, te recomiendo que te pongas\n'+ 
+      'en contacto con el equipo de TEC Services a través del correo TECservices@servicios.tec.mx\n'+ 
+      'para que puedan apoyarte a rastrearlo. 📦',
+      handler: () => actionProvider.handleMenuPrincipal(),
+      id: 1,
+    },
+
+  ];
+};
+
+//menu 4
 const getMenu4Options = (actionProvider) => {
   return [
     {
@@ -154,7 +286,46 @@ const getMenu4Options = (actionProvider) => {
     },
   ];
 };
+const getMenu4Op1 = (actionProvider) => {
+  return [
+    {
+      text: 'Por el momento estas son las formas de pago que estan disponibles:\n'+
+        'Tarjetas de Crédito o Débito Visa, MasterCard, American Express y Carnet 💳\n'+
+        'PayPaln\n'+
+        'Ficha de depósito para pago en ventanilla bancaria 💰\n'+
+        'Bancos participantes: Bancomer, Banorte, Banamex, Santander y HSBC\n'+
+        'Banca electrónica 🖥️\n'+
+        'Bancos participantes: Bancomer, Banorte, Banamex y Santander\n'+
+        'Los estudiantes de Profesional y Posgrado tienen la opción de cargo en Estado de Cuenta',
+      handler: () => actionProvider.handleMenuPrincipal(),
+      id: 1,
+    },
+  ];
+};
+const getMenu4Op2 = (actionProvider) => {
+  return [
+    {
+      text: 'Para poder dar seguimiento a tu pedido únicamente necesitas el número\n'+ 
+      'de guía para rastrearlo directamente en la página de la paquetería que se te indique. 🚚',
+      handler: () => actionProvider.handleMenuPrincipal(),
+      id: 1,
+    },
 
+  ];
+};
+const getMenu4Op3 = (actionProvider) => {
+  return [
+    {
+      text: 'Si consideras que tu pedido ya tardó demasiado, te recomiendo que te pongas\n'+ 
+      'en contacto con el equipo de TEC Services a través del correo TECservices@servicios.tec.mx\n'+ 
+      'para que puedan apoyarte a rastrearlo. 📦',
+      handler: () => actionProvider.handleMenuPrincipal(),
+      id: 1,
+    },
+
+  ];
+};
+//menu 5
 const getMenu5Options = (actionProvider) => {
   return [
     {
@@ -179,7 +350,46 @@ const getMenu5Options = (actionProvider) => {
     },
   ];
 };
+const getMenu5Op1 = (actionProvider) => {
+  return [
+    {
+      text: 'Por el momento estas son las formas de pago que estan disponibles:\n'+
+        'Tarjetas de Crédito o Débito Visa, MasterCard, American Express y Carnet 💳\n'+
+        'PayPaln\n'+
+        'Ficha de depósito para pago en ventanilla bancaria 💰\n'+
+        'Bancos participantes: Bancomer, Banorte, Banamex, Santander y HSBC\n'+
+        'Banca electrónica 🖥️\n'+
+        'Bancos participantes: Bancomer, Banorte, Banamex y Santander\n'+
+        'Los estudiantes de Profesional y Posgrado tienen la opción de cargo en Estado de Cuenta',
+      handler: () => actionProvider.handleMenuPrincipal(),
+      id: 1,
+    },
+  ];
+};
+const getMenu5Op2 = (actionProvider) => {
+  return [
+    {
+      text: 'Para poder dar seguimiento a tu pedido únicamente necesitas el número\n'+ 
+      'de guía para rastrearlo directamente en la página de la paquetería que se te indique. 🚚',
+      handler: () => actionProvider.handleMenuPrincipal(),
+      id: 1,
+    },
 
+  ];
+};
+const getMenu5Op3 = (actionProvider) => {
+  return [
+    {
+      text: 'Si consideras que tu pedido ya tardó demasiado, te recomiendo que te pongas\n'+ 
+      'en contacto con el equipo de TEC Services a través del correo TECservices@servicios.tec.mx\n'+ 
+      'para que puedan apoyarte a rastrearlo. 📦',
+      handler: () => actionProvider.handleMenuPrincipal(),
+      id: 1,
+    },
+
+  ];
+};
+//menu6
 const getMenu6Options = (actionProvider) => {
   return [
     {
@@ -204,7 +414,47 @@ const getMenu6Options = (actionProvider) => {
     },
   ];
 };
+const getMenu6Op1 = (actionProvider) => {
+  return [
+    {
+      text: 'Por el momento estas son las formas de pago que estan disponibles:\n'+
+        'Tarjetas de Crédito o Débito Visa, MasterCard, American Express y Carnet 💳\n'+
+        'PayPaln\n'+
+        'Ficha de depósito para pago en ventanilla bancaria 💰\n'+
+        'Bancos participantes: Bancomer, Banorte, Banamex, Santander y HSBC\n'+
+        'Banca electrónica 🖥️\n'+
+        'Bancos participantes: Bancomer, Banorte, Banamex y Santander\n'+
+        'Los estudiantes de Profesional y Posgrado tienen la opción de cargo en Estado de Cuenta',
+      handler: () => actionProvider.handleMenuPrincipal(),
+      id: 1,
+    },
+  ];
+};
+const getMenu6Op2 = (actionProvider) => {
+  return [
+    {
+      text: 'Para poder dar seguimiento a tu pedido únicamente necesitas el número\n'+ 
+      'de guía para rastrearlo directamente en la página de la paquetería que se te indique. 🚚',
+      handler: () => actionProvider.handleMenuPrincipal(),
+      id: 1,
+    },
 
+  ];
+};
+const getMenu6Op3 = (actionProvider) => {
+  return [
+    {
+      text: 'Si consideras que tu pedido ya tardó demasiado, te recomiendo que te pongas\n'+ 
+      'en contacto con el equipo de TEC Services a través del correo TECservices@servicios.tec.mx\n'+ 
+      'para que puedan apoyarte a rastrearlo. 📦',
+      handler: () => actionProvider.handleMenuPrincipal(),
+      id: 1,
+    },
+
+  ];
+};
+
+//Configuracion del Boot
 const config = {
   botName: 'TEC Bot',
   initialMessages: [
@@ -212,41 +462,64 @@ const config = {
       "Hola soy TECbot, ¿en qué te puedo ayudar?",
       {
         widget: 'moodOptions',
+        delay: 1000,
       }
     ),
   ],
-  // customStyles: {
-  //   botMessageBox: {
-  //     backgroundColor: '#147efb',
-  //   },
-  //   chatButton: {
-  //     backgroundColor: '#147efb',
-  //   },
-  // },
+  // Menu principal
   widgets: [
     {
       widgetName: 'moodOptions',
+      delay: 1000,
       widgetFunc: ({ actionProvider }) => (
         <Options actionProvider={actionProvider} getOptions={getMoodOptions} />
       ),
     },
-    // {
-    //   widgetName: 'jokeOptions',
-    //   widgetFunc: ({ actionProvider }) => (
-    //     <Options actionProvider={actionProvider} getOptions={getJokeOptions} />
-    //   ),
-    // },
+    //menu1
     {
-      widgetName: 'personalOptions',
+      widgetName: 'menu1',
+      delay: 1000,
       widgetFunc: ({ actionProvider }) => (
         <Options
           actionProvider={actionProvider}
-          getOptions={getPersonalOptions}
+          getOptions={getMenu1Options}
         />
       ),
     },
     {
+      widgetName: 'menu1op1',
+      delay: 1000,
+      widgetFunc: ({ actionProvider }) => (
+        <Options
+          actionProvider={actionProvider}
+          getOptions={getMenu1Op1}
+        />
+      ),
+    },
+    {
+      widgetName: 'menu1op2',
+      delay: 1000,
+      widgetFunc: ({ actionProvider }) => (
+        <Options
+          actionProvider={actionProvider}
+          getOptions={getMenu1Op2}
+        />
+      ),
+    },
+    {
+      widgetName: 'menu1op3',
+      delay: 1000,
+      widgetFunc: ({ actionProvider }) => (
+        <Options
+          actionProvider={actionProvider}
+          getOptions={getMenu1Op3}
+        />
+      ),
+    },
+    //menu2
+    {
       widgetName: 'menu2',
+      delay: 1000,
       widgetFunc: ({ actionProvider }) => (
         <Options
           actionProvider={actionProvider}
@@ -254,6 +527,35 @@ const config = {
         />
       ),
     },
+    {
+      widgetName: 'menu2op1',
+      delay: 1000,
+      widgetFunc: ({ actionProvider }) => (
+        <Options
+          actionProvider={actionProvider}
+          getOptions={getMenu2Op1}
+        />
+      ),
+    },
+    {
+      widgetName: 'menu2op2',
+      widgetFunc: ({ actionProvider }) => (
+        <Options
+          actionProvider={actionProvider}
+          getOptions={getMenu2Op2}
+        />
+      ),
+    },
+    {
+      widgetName: 'menu2op3',
+      widgetFunc: ({ actionProvider }) => (
+        <Options
+          actionProvider={actionProvider}
+          getOptions={getMenu2Op3}
+        />
+      ),
+    },
+    //menu3
     {
       widgetName: 'menu3',
       widgetFunc: ({ actionProvider }) => (
@@ -264,6 +566,34 @@ const config = {
       ),
     },
     {
+      widgetName: 'menu3op1',
+      widgetFunc: ({ actionProvider }) => (
+        <Options
+          actionProvider={actionProvider}
+          getOptions={getMenu3Op1}
+        />
+      ),
+    },
+    {
+      widgetName: 'menu3op2',
+      widgetFunc: ({ actionProvider }) => (
+        <Options
+          actionProvider={actionProvider}
+          getOptions={getMenu3Op2}
+        />
+      ),
+    },
+    {
+      widgetName: 'menu3op3',
+      widgetFunc: ({ actionProvider }) => (
+        <Options
+          actionProvider={actionProvider}
+          getOptions={getMenu3Op3}
+        />
+      ),
+    },
+    //menu4
+    {
       widgetName: 'menu4',
       widgetFunc: ({ actionProvider }) => (
         <Options
@@ -272,6 +602,34 @@ const config = {
         />
       ),
     },
+    {
+      widgetName: 'menu4op1',
+      widgetFunc: ({ actionProvider }) => (
+        <Options
+          actionProvider={actionProvider}
+          getOptions={getMenu4Op1}
+        />
+      ),
+    },
+    {
+      widgetName: 'menu4op2',
+      widgetFunc: ({ actionProvider }) => (
+        <Options
+          actionProvider={actionProvider}
+          getOptions={getMenu4Op2}
+        />
+      ),
+    },
+    {
+      widgetName: 'menu4op3',
+      widgetFunc: ({ actionProvider }) => (
+        <Options
+          actionProvider={actionProvider}
+          getOptions={getMenu4Op3}
+        />
+      ),
+    },
+    //Menu5
     {
       widgetName: 'menu5',
       widgetFunc: ({ actionProvider }) => (
@@ -282,6 +640,34 @@ const config = {
       ),
     },
     {
+      widgetName: 'menu5op1',
+      widgetFunc: ({ actionProvider }) => (
+        <Options
+          actionProvider={actionProvider}
+          getOptions={getMenu5Op1}
+        />
+      ),
+    },
+    {
+      widgetName: 'menu5op2',
+      widgetFunc: ({ actionProvider }) => (
+        <Options
+          actionProvider={actionProvider}
+          getOptions={getMenu5Op2}
+        />
+      ),
+    },
+    {
+      widgetName: 'menu5op3',
+      widgetFunc: ({ actionProvider }) => (
+        <Options
+          actionProvider={actionProvider}
+          getOptions={getMenu5Op3}
+        />
+      ),
+    },
+    //Menu6
+    {
       widgetName: 'menu6',
       widgetFunc: ({ actionProvider }) => (
         <Options
@@ -291,21 +677,43 @@ const config = {
       ),
     },
     {
-      widgetName: 'experienceOptions',
-      widgetFunc: () => <ExperienceCards />,
+      widgetName: 'menu6op1',
+      widgetFunc: ({ actionProvider }) => (
+        <Options
+          actionProvider={actionProvider}
+          getOptions={getMenu6Op1}
+        />
+      ),
     },
     {
-      widgetName: 'projectsOptions',
-      widgetFunc: () => <ProjectCards />,
+      widgetName: 'menu6op2',
+      widgetFunc: ({ actionProvider }) => (
+        <Options
+          actionProvider={actionProvider}
+          getOptions={getMenu6Op2}
+        />
+      ),
     },
     {
-      widgetName: 'skillsOptions',
-      widgetFunc: () => <SkillCards />,
+      widgetName: 'menu6op3',
+      widgetFunc: ({ actionProvider }) => (
+        <Options
+          actionProvider={actionProvider}
+          getOptions={getMenu6Op3}
+        />
+      ),
     },
+    //regresarmenu
     {
-      widgetName: 'blogsOptions',
-      widgetFunc: () => <BlogCards />,
+      widgetName: 'regresarmenu',
+      widgetFunc: ({ actionProvider }) => (
+        <Options
+          actionProvider={actionProvider}
+          getOptions={getMoodOptions}
+        />
+      ),
     },
+    
   ],
 };
 
