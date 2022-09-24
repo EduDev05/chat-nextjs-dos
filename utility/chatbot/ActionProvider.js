@@ -10,36 +10,34 @@ const skills =
 const blogs = 'Check out my blogs on Dev Community and Medium!';
 
 //menu1
-const menu1 = "Da click en alguna de estas consultas frecuentes o escribe tu duda abajo 😉";
-const menu1op1="Recuperacíon de contraseña";
-const menu1op2="¿Cómo navegar en el portal?";
-const menu1op3="¿Cómo editar mi perfil?";
+const menu1 = "Navegación Market Tec 🖥️";
+const menu1op1="Recuperación de contraseña 🔐";
+const menu1op2="¿Cómo navegar en el portal? 🖥️";
+const menu1op3="¿Cómo editar mi perfil? 👤";
 //menu2
-const menu2 = "Da click en alguna de estas consultas frecuentes o escribe tu duda abajo 😉";
-const menu2op1="¿Comó realizar un pedido?";
-const menu2op2="Rastrear pedido";
-const menu2op3="No ha llegado mi pedido";
+const menu2 = "Pedidos 🛒";
+const menu2op1="¿Cómo realizar un pedido? 🛍️";
+const menu2op2="Rastrear pedido 🚛";
+const menu2op3="No ha llegado mi pedido 📦";
 const regresarmenu="Regresar al menu principal";
 //menu3
-const menu3 = "Pagos";
-const menu3op1="¿Comó realizar un pedido?";
-const menu3op2="Rastrear pedido";
-const menu3op3="No ha llegado mi pedido";
+const menu3 = "Pagos 💳";
+const menu3op1="Formas de pago disponibles 💳";
+const menu3op2="Problemas al pagar ❌";
+const menu3op3="¿Como validar un pago? ✅";
 //menu4
-const menu4 = "Facturacion";
-const menu4op1="¿Comó realizar un pedido?";
-const menu4op2="Rastrear pedido";
-const menu4op3="No ha llegado mi pedido";
+const menu4 = "Facturación 📝";
+const menu4op1="Datos para facturar 📝";
+const menu4op2="Proceso de facturación 🖋️";
+const menu4op3="Problemas de facturación ❌";
 //menu5
-const menu5 = "Cambios y devoluciones";
-const menu5op1="¿Comó realizar un pedido?";
-const menu5op2="Rastrear pedido";
-const menu5op3="No ha llegado mi pedido";
+const menu5 = "Cambios y Devoluciones 📦";
+const menu5op1="¿Cómo solicito un cambio? 👟";
+const menu5op2="Solicitud de devoluciones 💰";
 //menu6
-const menu6 = "Servicios";
-const menu6op1="¿Comó realizar un pedido?";
-const menu6op2="Rastrear pedido";
-const menu6op3="No ha llegado mi pedido";
+const menu6 = "Servicios 🚌";
+const menu6op1="Centro de idiomas";
+const menu6op2="Emprendimiento";
 
 
 class ActionProvider {
@@ -50,7 +48,7 @@ class ActionProvider {
 
   greet() {
     const greetingMessage = this.createChatBotMessage(
-      'AI chat in development...'
+      'Hola 👋 ¿En qué te puedo ayudar?'
     );
     this.updateChatbotState(greetingMessage);
   }
@@ -173,12 +171,6 @@ class ActionProvider {
     });
     this.updateChatbotState(message);
   }
-  handleMenu5Op3() {
-    const message = this.createChatBotMessage(menu5op3, {
-      widget: 'menu5po3',
-    });
-    this.updateChatbotState(message);
-  }
   //menu6 opciones
   handleMenu6() {
     const message = this.createChatBotMessage(menu6, {
@@ -223,28 +215,6 @@ class ActionProvider {
   handleMenuPrincipal() {
     const message = this.createChatBotMessage(regresarmenu, {
       widget: 'regresarmenu',
-    });
-    this.updateChatbotState(message);
-  }
-
-
-  handleProjects() {
-    const message = this.createChatBotMessage(projects, {
-      widget: 'projectsOptions',
-    });
-    this.updateChatbotState(message);
-  }
-
-  handleSkills() {
-    const message = this.createChatBotMessage(skills, {
-      widget: 'skillsOptions',
-    });
-    this.updateChatbotState(message);
-  }
-
-  handleBlogs() {
-    const message = this.createChatBotMessage(blogs, {
-      widget: 'blogsOptions',
     });
     this.updateChatbotState(message);
   }

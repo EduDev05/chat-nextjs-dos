@@ -40,45 +40,21 @@ const getMoodOptions = (actionProvider) => {
   ];
 };
 
-// const getPersonalOptions = (actionProvider) => {
-//   return [
-//     {
-//       text: 'Experience',
-//       handler: () => actionProvider.handleExperience(),
-//       id: 1,
-//     },
-//     {
-//       text: 'Projects',
-//       handler: () => actionProvider.handleProjects(),
-//       id: 2,
-//     },
-//     {
-//       text: 'Skills',
-//       handler: () => actionProvider.handleSkills(),
-//       id: 3,
-//     },
-//     {
-//       text: 'Blogs',
-//       handler: () => actionProvider.handleBlogs(),
-//       id: 4,
-//     },
-//   ];
-// };
 //Menu1
 const getMenu1Options = (actionProvider) => {
   return [
     {
-      text: 'Recuperacíon de contraseña',
+      text: 'Recuperación de contraseña 🔐',
       handler: () => actionProvider.handleMenu1Op1(),
       id: 1,
     },
     {
-      text: '¿Cómo navegar en el portal?',
+      text: '¿Cómo navegar en el portal? 🖥️',
       handler: () => actionProvider.handleMenu1Op2(),
       id: 2,
     },
     {
-      text: '¿Cómo editar mi perfil?',
+      text: '¿Cómo editar mi perfil? 👤',
       handler: () => actionProvider.handleMenu1Op3(),
       id: 3,
     },
@@ -93,14 +69,13 @@ const getMenu1Options = (actionProvider) => {
 const getMenu1Op1 = (actionProvider) => {
   return [
     {
-      text: '¡Comprar en Market Tec es muy fácil! 👇\nBusca tus productos y/o servicios\n'+
-      'Agrégalos a un carrito de compra dando clic en Agregar al carrito 🛒\n'+
-      'Una vez que termines, ve a tu carrito en la parte superior derecha y da clic en Cerrar pedido\n'+
-      'Revisa que tu pedido esté correcto y da clic en Continuar\n'+
-      'Si eres nuevo usuario, llena los datos de contacto 👤\n'+
-      'Captura tu dirección de envío\n'+
-      'Elige método de pago y da clic en Comprar ahora 💳\n'+
-      '¡Listo! Podrás revisar tu pedido en la sección de Mis Pedidos',
+      text: 'Para solicitar el cambio o recuperación de tu contraseña sólo debes: 🔐\n'+
+      'Dar clic en el botón Iniciar Sesión en la sección superior de Market Tec\n'+
+      'Elegir la opción Ingresar con mail y contraseña\n'+
+      'Seleccionar la opción Olvidé mi contraseña\n'+
+      'Ingresar tu correo electrónico\n'+
+      'Dar clic en enviar y ¡Listo!\n'+
+      'En menos de 3 minutos recibirás un correo con los pasos a seguir para cambiar tu contraseña. 📩\n',
       handler: () => actionProvider.handleMenuPrincipal(),
       id: 1,
     },
@@ -121,9 +96,12 @@ const getMenu1Op2 = (actionProvider) => {
 const getMenu1Op3 = (actionProvider) => {
   return [
     {
-      text: 'Si consideras que tu pedido ya tardó demasiado, te recomiendo que te pongas\n'+ 
-      'en contacto con el equipo de TEC Services a través del correo TECservices@servicios.tec.mx\n'+ 
-      'para que puedan apoyarte a rastrearlo. 📦',
+      text: 'Entra a la sección Mi cuenta después de iniciar sesión y dirígete a la opción 👤 Perfil para editar tus datos como:\n'+
+      'Nombre\n'+
+      'E-mail\n'+
+      'Teléfono\n'+
+      'Entre otros.\n'+
+      '👉 Aquí también podrás definir tu contraseña y cambiarla las veces que sea necesario.',
       handler: () => actionProvider.handleMenuPrincipal(),
       id: 1,
     },
@@ -134,17 +112,17 @@ const getMenu1Op3 = (actionProvider) => {
 const getMenu2Options = (actionProvider) => {
   return [
     {
-      text: '¿Comó realizar un pedido?',
+      text: '¿Cómo realizar un pedido? 🛍️',
       handler: () => actionProvider.handleMenu2Op1(),
       id: 1,
     },
     {
-      text: 'Rastrear pedido',
+      text: 'Rastrear pedido 🚛',
       handler: () => actionProvider.handleMenu2Op2(),
       id: 2,
     },
     {
-      text: 'No ha llegado mi pedido',
+      text: 'No ha llegado mi pedido 📦',
       handler: () => actionProvider.handleMenu2Op3(),
       id: 3,
     },
@@ -200,17 +178,17 @@ const getMenu2Op3 = (actionProvider) => {
 const getMenu3Options = (actionProvider) => {
   return [
     {
-      text: 'Formas de pago disponible',
+      text: 'Formas de pago disponibles 💳',
       handler: () => actionProvider.handleMenu3Op1(),
       id: 1,
     },
     {
-      text: 'Problemas al pagar',
+      text: 'Problemas al pagar ❌',
       handler: () => actionProvider.handleMenu3Op2(),
       id: 2,
     },
     {
-      text: '¿Como validar un pago?',
+      text: '¿Como validar un pago? ✅',
       handler: () => actionProvider.handleMenu3Op3(),
       id: 3,
     },
@@ -265,23 +243,23 @@ const getMenu3Op3 = (actionProvider) => {
 const getMenu4Options = (actionProvider) => {
   return [
     {
-      text: 'Experience',
-      handler: () => actionProvider.handleExperience(),
+      text: 'Datos para facturar 📝',
+      handler: () => actionProvider.handleMenu4Op1(),
       id: 1,
     },
     {
-      text: 'Projects',
-      handler: () => actionProvider.handleProjects(),
+      text: 'Proceso de facturación 🖋️',
+      handler: () => actionProvider.handleMenu4Op2(),
       id: 2,
     },
     {
-      text: 'Skills',
-      handler: () => actionProvider.handleSkills(),
+      text: 'Problemas de facturación ❌',
+      handler: () => actionProvider.handleMenu4Op3(),
       id: 3,
     },
     {
-      text: 'Blogs',
-      handler: () => actionProvider.handleBlogs(),
+      text: 'Regresar al menu princial',
+      handler: () => actionProvider.handleMenuPrincipal(),
       id: 4,
     },
   ];
@@ -329,24 +307,19 @@ const getMenu4Op3 = (actionProvider) => {
 const getMenu5Options = (actionProvider) => {
   return [
     {
-      text: 'Experience',
-      handler: () => actionProvider.handleExperience(),
+      text: '¿Cómo solicito un cambio? 👟',
+      handler: () => actionProvider.handleMenu5Op1(),
       id: 1,
     },
     {
-      text: 'Projects',
-      handler: () => actionProvider.handleProjects(),
+      text: 'Solicitud de devoluciones 💰',
+      handler: () => actionProvider.handleMenu5Op2(),
       id: 2,
     },
     {
-      text: 'Skills',
-      handler: () => actionProvider.handleSkills(),
+      text: 'Regresar al menu princial',
+      handler: () => actionProvider.handleMenuPrincipal(),
       id: 3,
-    },
-    {
-      text: 'Blogs',
-      handler: () => actionProvider.handleBlogs(),
-      id: 4,
     },
   ];
 };
@@ -377,40 +350,23 @@ const getMenu5Op2 = (actionProvider) => {
 
   ];
 };
-const getMenu5Op3 = (actionProvider) => {
-  return [
-    {
-      text: 'Si consideras que tu pedido ya tardó demasiado, te recomiendo que te pongas\n'+ 
-      'en contacto con el equipo de TEC Services a través del correo TECservices@servicios.tec.mx\n'+ 
-      'para que puedan apoyarte a rastrearlo. 📦',
-      handler: () => actionProvider.handleMenuPrincipal(),
-      id: 1,
-    },
-
-  ];
-};
 //menu6
 const getMenu6Options = (actionProvider) => {
   return [
     {
-      text: 'Experience',
-      handler: () => actionProvider.handleExperience(),
+      text: 'Centro de idiomas',
+      handler: () => actionProvider.handleMenu6Op1(),
       id: 1,
     },
     {
-      text: 'Projects',
-      handler: () => actionProvider.handleProjects(),
+      text: 'Emprendimiento',
+      handler: () => actionProvider.handleMenu6Op2(),
       id: 2,
     },
     {
-      text: 'Skills',
-      handler: () => actionProvider.handleSkills(),
+      text: 'Regresar al menu princial',
+      handler: () => actionProvider.handleMenuPrincipal(),
       id: 3,
-    },
-    {
-      text: 'Blogs',
-      handler: () => actionProvider.handleBlogs(),
-      id: 4,
     },
   ];
 };
@@ -480,40 +436,28 @@ const config = {
       widgetName: 'menu1',
       delay: 1000,
       widgetFunc: ({ actionProvider }) => (
-        <Options
-          actionProvider={actionProvider}
-          getOptions={getMenu1Options}
-        />
+        <Options actionProvider={actionProvider} getOptions={getMenu1Options}/>
       ),
     },
     {
       widgetName: 'menu1op1',
       delay: 1000,
       widgetFunc: ({ actionProvider }) => (
-        <Options
-          actionProvider={actionProvider}
-          getOptions={getMenu1Op1}
-        />
+        <Options actionProvider={actionProvider} getOptions={getMenu1Op1}/>
       ),
     },
     {
       widgetName: 'menu1op2',
       delay: 1000,
       widgetFunc: ({ actionProvider }) => (
-        <Options
-          actionProvider={actionProvider}
-          getOptions={getMenu1Op2}
-        />
+        <Options actionProvider={actionProvider} getOptions={getMenu1Op2}/>
       ),
     },
     {
       widgetName: 'menu1op3',
       delay: 1000,
       widgetFunc: ({ actionProvider }) => (
-        <Options
-          actionProvider={actionProvider}
-          getOptions={getMenu1Op3}
-        />
+        <Options actionProvider={actionProvider} getOptions={getMenu1Op3}/>
       ),
     },
     //menu2
@@ -521,196 +465,133 @@ const config = {
       widgetName: 'menu2',
       delay: 1000,
       widgetFunc: ({ actionProvider }) => (
-        <Options
-          actionProvider={actionProvider}
-          getOptions={getMenu2Options}
-        />
+        <Options actionProvider={actionProvider} getOptions={getMenu2Options}/>
       ),
     },
     {
       widgetName: 'menu2op1',
       delay: 1000,
       widgetFunc: ({ actionProvider }) => (
-        <Options
-          actionProvider={actionProvider}
-          getOptions={getMenu2Op1}
-        />
+        <Options actionProvider={actionProvider} getOptions={getMenu2Op1}/>
       ),
     },
     {
       widgetName: 'menu2op2',
       widgetFunc: ({ actionProvider }) => (
-        <Options
-          actionProvider={actionProvider}
-          getOptions={getMenu2Op2}
-        />
+        <Options actionProvider={actionProvider} getOptions={getMenu2Op2}/>
       ),
     },
     {
       widgetName: 'menu2op3',
       widgetFunc: ({ actionProvider }) => (
-        <Options
-          actionProvider={actionProvider}
-          getOptions={getMenu2Op3}
-        />
+        <Options actionProvider={actionProvider} getOptions={getMenu2Op3}/>
       ),
     },
     //menu3
     {
       widgetName: 'menu3',
       widgetFunc: ({ actionProvider }) => (
-        <Options
-          actionProvider={actionProvider}
-          getOptions={getMenu3Options}
-        />
+        <Options actionProvider={actionProvider} getOptions={getMenu3Options}/>
       ),
     },
     {
       widgetName: 'menu3op1',
       widgetFunc: ({ actionProvider }) => (
-        <Options
-          actionProvider={actionProvider}
-          getOptions={getMenu3Op1}
-        />
+        <Options actionProvider={actionProvider} getOptions={getMenu3Op1}/>
       ),
     },
     {
       widgetName: 'menu3op2',
       widgetFunc: ({ actionProvider }) => (
-        <Options
-          actionProvider={actionProvider}
-          getOptions={getMenu3Op2}
-        />
+        <Options actionProvider={actionProvider} getOptions={getMenu3Op2}/>
       ),
     },
     {
       widgetName: 'menu3op3',
       widgetFunc: ({ actionProvider }) => (
-        <Options
-          actionProvider={actionProvider}
-          getOptions={getMenu3Op3}
-        />
+        <Options actionProvider={actionProvider} getOptions={getMenu3Op3}/>
       ),
     },
     //menu4
     {
       widgetName: 'menu4',
       widgetFunc: ({ actionProvider }) => (
-        <Options
-          actionProvider={actionProvider}
-          getOptions={getMenu4Options}
-        />
+        <Options actionProvider={actionProvider} getOptions={getMenu4Options}/>
       ),
     },
     {
       widgetName: 'menu4op1',
       widgetFunc: ({ actionProvider }) => (
-        <Options
-          actionProvider={actionProvider}
-          getOptions={getMenu4Op1}
-        />
+        <Options actionProvider={actionProvider} getOptions={getMenu4Op1}/>
       ),
     },
     {
       widgetName: 'menu4op2',
       widgetFunc: ({ actionProvider }) => (
-        <Options
-          actionProvider={actionProvider}
-          getOptions={getMenu4Op2}
-        />
+        <Options actionProvider={actionProvider} getOptions={getMenu4Op2}/>
       ),
     },
     {
       widgetName: 'menu4op3',
       widgetFunc: ({ actionProvider }) => (
-        <Options
-          actionProvider={actionProvider}
-          getOptions={getMenu4Op3}
-        />
+        <Options actionProvider={actionProvider} getOptions={getMenu4Op3}/>
       ),
     },
     //Menu5
     {
       widgetName: 'menu5',
       widgetFunc: ({ actionProvider }) => (
-        <Options
-          actionProvider={actionProvider}
-          getOptions={getMenu5Options}
-        />
+        <Options actionProvider={actionProvider} getOptions={getMenu5Options}/>
       ),
     },
     {
       widgetName: 'menu5op1',
       widgetFunc: ({ actionProvider }) => (
-        <Options
-          actionProvider={actionProvider}
-          getOptions={getMenu5Op1}
-        />
+        <Options actionProvider={actionProvider} getOptions={getMenu5Op1}/>
       ),
     },
     {
       widgetName: 'menu5op2',
       widgetFunc: ({ actionProvider }) => (
-        <Options
-          actionProvider={actionProvider}
-          getOptions={getMenu5Op2}
-        />
+        <Options actionProvider={actionProvider} getOptions={getMenu5Op2}/>
       ),
     },
     {
       widgetName: 'menu5op3',
       widgetFunc: ({ actionProvider }) => (
-        <Options
-          actionProvider={actionProvider}
-          getOptions={getMenu5Op3}
-        />
+        <Options actionProvider={actionProvider} getOptions={getMenu5Op3}/>
       ),
     },
     //Menu6
     {
       widgetName: 'menu6',
       widgetFunc: ({ actionProvider }) => (
-        <Options
-          actionProvider={actionProvider}
-          getOptions={getMenu6Options}
-        />
+        <Options actionProvider={actionProvider} getOptions={getMenu6Options}/>
       ),
     },
     {
       widgetName: 'menu6op1',
       widgetFunc: ({ actionProvider }) => (
-        <Options
-          actionProvider={actionProvider}
-          getOptions={getMenu6Op1}
-        />
+        <Options actionProvider={actionProvider} getOptions={getMenu6Op1}/>
       ),
     },
     {
       widgetName: 'menu6op2',
       widgetFunc: ({ actionProvider }) => (
-        <Options
-          actionProvider={actionProvider}
-          getOptions={getMenu6Op2}
-        />
+        <Options actionProvider={actionProvider} getOptions={getMenu6Op2}/>
       ),
     },
     {
       widgetName: 'menu6op3',
       widgetFunc: ({ actionProvider }) => (
-        <Options
-          actionProvider={actionProvider}
-          getOptions={getMenu6Op3}
-        />
+        <Options actionProvider={actionProvider} getOptions={getMenu6Op3}/>
       ),
     },
     //regresarmenu
     {
       widgetName: 'regresarmenu',
       widgetFunc: ({ actionProvider }) => (
-        <Options
-          actionProvider={actionProvider}
-          getOptions={getMoodOptions}
-        />
+        <Options actionProvider={actionProvider} getOptions={getMoodOptions} />
       ),
     },
     
